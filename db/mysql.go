@@ -12,13 +12,10 @@ func Init() *dbr.Session {
 
 	return session
 }
-//root:@tcp(localhost:3306)/mydatabase
+
 func getSession() *dbr.Session {
 
-	//db, err := dbr.Open("mysql",
-	//	conf.USER+":"+conf.PASSWORD+"@tcp("+conf.HOST+":"+conf.PORT+")/"+conf.DB,
-	//	nil)
-	db, err := dbr.Open("mysql","admin:@tcp(localhost:3306)/test",
+	db, err := dbr.Open("mysql","root:@tcp(localhost:3306)/HackKean",
 		nil)
 
 	if err != nil {
